@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-.info {
+.basic-info-card-info {
   margin: auto;
   display: flex;
   flex-direction: column;

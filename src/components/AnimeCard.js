@@ -12,6 +12,7 @@ function AnimeCard(props) {
   const [animeRank, setAnimeRank] = useState("");
   const [animeScore, setAnimeScore] = useState("");
   const [animeDirector, setAnimeDirector] = useState("");
+  const [animeProduction, setAnimeProduction] = useState("");
   const [animeTopTags, setAnimeTopTags] = useState([]);
   const [errorLoading, setErrorLoading] = useState(true);
   useEffect(() => {
@@ -61,9 +62,11 @@ function AnimeCard(props) {
         // const name = response.data.infobox["中文名"];
         // const epNum = response.data.infobox[2].value;
         const director = getInfo(response, "导演");
+        const production = getInfo(response, "动画制作", "制作");
         if (!name) {
           name = response.data.name;
         }
+        console.log(response.data);
         const epNum = getInfo(response, "话数");
         const startDate = getInfo(response, "放送开始", "上映年度");
         const rank = response.data.rating.rank;
@@ -76,6 +79,7 @@ function AnimeCard(props) {
         setAnimeEpNum(epNum);
         setAnimeStartDate(startDate);
         setAnimeDirector(director);
+        setAnimeProduction(production);
         setAnimeRank(rank);
         setAnimeScore(score);
         setAnimeTopTags(tags);
@@ -95,9 +99,10 @@ function AnimeCard(props) {
           <img src={imageUrl} alt="" />
         </div>
       </div>
-      <div className="info">
+      <div className="anime-card-info">
         <h1>{animeName}</h1>
         {animeDirector && <p>导演：{animeDirector}</p>}
+        {animeProduction && <p>制作：{animeProduction}</p>}
         <p>共{animeEpNum}话</p>
         {animeStartDate && <p>{animeStartDate}播出</p>}
         <p>

@@ -43,7 +43,7 @@ function BasicInfoCard(props) {
           />
         </div>
         <div className="flip-card-back">
-          <div className="info">
+          <div className="basic-info-card-info">
             <h1 className="flip-card-username">{props.name}</h1>
             <p className="flip-card-mbti">MBTI: {props.mbti}</p>
             <a
