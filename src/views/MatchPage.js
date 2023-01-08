@@ -76,7 +76,7 @@ function MatchPage() {
       <h1>你的MBTI是：{mbti}</h1>
       <div className="result-page" style={{ width: "80%", margin: "auto" }}>
         <h2 style={{ marginTop: "5%" }}>这些人和你最相似：</h2>
-        <div className="wall">
+        <div className="match-page-wall">
           {mostMatch.map((object) => (
             <div className="card" key={object.id}>
               <BasicInfoCard
@@ -91,7 +91,7 @@ function MatchPage() {
           ))}
         </div>
         <h2 style={{ marginTop: "5%" }}>这些人和你最不相似：</h2>
-        <div className="wall">
+        <div className="match-page-wall">
           {leastMatch.map((object) => (
             <div className="card" key={object.id}>
               <BasicInfoCard

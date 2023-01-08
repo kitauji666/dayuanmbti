@@ -1,10 +1,10 @@
-.wall {
+.match-page-wall {
   width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.wall .card {
+.match-page-wall .card {
   aspect-ratio : 1 / 1;
   border: none;
   width: 100%;
