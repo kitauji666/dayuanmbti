@@ -106,6 +106,11 @@ function MatchPage() {
           ))}
         </div>
       </div>
+      <div className="wall-arrow-section">
+        <a className="wall-arrow" href="#/mbti">
+          <Button>{"←"}</Button>
+        </a>
+      </div>
     </div>
   );
 }
