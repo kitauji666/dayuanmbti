@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/dayuan-hall-of-fame/static/css/main.6e55471e.css",
-    "main.js": "/dayuan-hall-of-fame/static/js/main.07395a2c.js",
-    "index.html": "/dayuan-hall-of-fame/index.html",
-    "main.6e55471e.css.map": "/dayuan-hall-of-fame/static/css/main.6e55471e.css.map",
-    "main.07395a2c.js.map": "/dayuan-hall-of-fame/static/js/main.07395a2c.js.map"
+    "main.css": "/dayuanmbti/static/css/main.6e55471e.css",
+    "main.js": "/dayuanmbti/static/js/main.07395a2c.js",
+    "index.html": "/dayuanmbti/index.html",
+    "main.6e55471e.css.map": "/dayuanmbti/static/css/main.6e55471e.css.map",
+    "main.07395a2c.js.map": "/dayuanmbti/static/js/main.07395a2c.js.map"
   },
   "entrypoints": [
     "static/css/main.6e55471e.css",
