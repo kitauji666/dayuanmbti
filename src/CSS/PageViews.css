@@ -1,0 +1,18 @@
+.bangumi-recomm {
+  display: flex;
+  align-items: center;
+}
+.bangumi-recomm-header {
+  text-align: center;
+}
+
+.bangumi-recomm-bangumi-mainpage-link {
+  text-align: center;
+}
+.pagination-section {
+  align-items: center;
+}
+.pagination {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}

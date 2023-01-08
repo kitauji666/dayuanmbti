@@ -1,0 +1,28 @@
+.mbti-wall {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mbti-wall .circle {
+  aspect-ratio : 1 / 1;
+  width: 100%;
+  border: none;
+}
+
+.mbti-bottom-section {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.mbti-bottom-section form {
+  margin-top: 5%;
+}
+
+.mbti-bottom-section form button{
+  color: white;
+  border-color: dodgerblue;
+  background-color: dodgerblue;
+}

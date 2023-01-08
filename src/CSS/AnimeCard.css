@@ -1,0 +1,38 @@
+.anime-card {
+  font-family: "楷体","楷体_GB2312";
+  font-size: large;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid;
+  box-shadow: 10px 10px dodgerblue;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.anime-card-left-section {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  border-right: 3px dashed black;
+}
+.poster {
+  margin: auto;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.info {
+  width: 70%;
+  padding: 0 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.anime-card-comment {
+  border-bottom: 1px solid #1f67db;
+  line-height: 0.5vh;
+}
