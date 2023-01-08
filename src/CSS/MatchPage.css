@@ -1,0 +1,15 @@
+.wall {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.wall .card {
+  aspect-ratio : 1 / 1;
+  border: none;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-family: "楷体","楷体_GB2312";
+}

@@ -6,6 +6,7 @@ import axios from "axios";
 import BasicInfoCard from "../components/BasicInfoCard";
 import "../CSS/Home.css";
 import Loader from "../components/Loader";
+import "../CSS/MatchPage.css";
 function MatchPage() {
   const location = useLocation();
   const mbti = location.pathname.split("/").pop().toUpperCase();
@@ -73,12 +74,9 @@ function MatchPage() {
   return (
     <div>
       <h1>你的MBTI是：{mbti}</h1>
-      <div className="result-page" style={{width:"80%", margin:"auto"}}>
-        <h2 style={{marginTop:"5%"}}>这些人和你最相似：</h2>
-        <div
-          className="wall"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
-        >
+      <div className="result-page" style={{ width: "80%", margin: "auto" }}>
+        <h2 style={{ marginTop: "5%" }}>这些人和你最相似：</h2>
+        <div className="wall">
           {mostMatch.map((object) => (
             <div className="card" key={object.id}>
               <BasicInfoCard
@@ -87,15 +85,13 @@ function MatchPage() {
                 avatar={object.avatar}
                 mbti={object.mbti}
                 bgm={object.bgm ? object.bgm : "notfound"}
+                offline={object.offline}
               />
             </div>
           ))}
         </div>
-        <h2 style={{marginTop:"5%"}}>这些人和你最不相似：</h2>
-        <div
-          className="wall"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
-        >
+        <h2 style={{ marginTop: "5%" }}>这些人和你最不相似：</h2>
+        <div className="wall">
           {leastMatch.map((object) => (
             <div className="card" key={object.id}>
               <BasicInfoCard
@@ -104,6 +100,7 @@ function MatchPage() {
                 avatar={object.avatar}
                 mbti={object.mbti}
                 bgm={object.bgm ? object.bgm : "notfound"}
+                offline={object.offline}
               />
             </div>
           ))}
