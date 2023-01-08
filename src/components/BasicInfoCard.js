@@ -55,7 +55,7 @@ function BasicInfoCard(props) {
             </a>
             <a
               className="flip-card-link"
-              href={`/bgm/${props.bgm}`}
+              href={`/dayuanmbti/bgm/${props.bgm}`}
               target="_blank"
             >
               {props.name}的bangumi

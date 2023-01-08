@@ -11,10 +11,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/dayuanmbti" element={<Home/>} />
-        <Route path="/bgm/:id" element={<BangumiSummary/>} />
-        <Route path="/mbti" element={<MBTI/>} />
-        <Route path="/mbti/:id" element={<MBTIGroup/>} />
-        <Route path="/match/:id" element={<MatchPage/>} />
+        <Route path="/dayuanmbti/bgm/:id" element={<BangumiSummary/>} />
+        <Route path="/dayuanmbti/mbti" element={<MBTI/>} />
+        <Route path="/dayuanmbti/mbti/:id" element={<MBTIGroup/>} />
+        <Route path="/dayuanmbti/match/:id" element={<MatchPage/>} />
       </Routes>
     </BrowserRouter>
   );
