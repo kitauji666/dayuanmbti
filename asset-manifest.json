@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dayuanmbti/static/css/main.220e9ac9.css",
-    "main.js": "/dayuanmbti/static/js/main.7193589a.js",
+    "main.css": "/dayuanmbti/static/css/main.0cc3e238.css",
+    "main.js": "/dayuanmbti/static/js/main.68b681b1.js",
     "index.html": "/dayuanmbti/index.html",
-    "main.220e9ac9.css.map": "/dayuanmbti/static/css/main.220e9ac9.css.map",
-    "main.7193589a.js.map": "/dayuanmbti/static/js/main.7193589a.js.map"
+    "main.0cc3e238.css.map": "/dayuanmbti/static/css/main.0cc3e238.css.map",
+    "main.68b681b1.js.map": "/dayuanmbti/static/js/main.68b681b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.220e9ac9.css",
-    "static/js/main.7193589a.js"
+    "static/css/main.0cc3e238.css",
+    "static/js/main.68b681b1.js"
   ]
 }
