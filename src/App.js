@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/bgm/:id" element={<BangumiSummary />} />
+      <Route path="/dayuanmbti/bgm/:id" element={<BangumiSummary />} />
       <Route path="/mbti" element={<MBTI />} />
       <Route path="/mbti/:id" element={<MBTIGroup />} />
       <Route path="/match/:id" element={<MatchPage />} />
