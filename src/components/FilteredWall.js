@@ -54,7 +54,7 @@ function FilteredWall(props) {
       </div>
       {filter != "none" && objects.length == 0 && <p style={{textAlign:"center", marginTop:"3%"}}>暂无此类型的人</p>}
       <div className="wall-arrow-section">
-        <a className="wall-arrow" href="/dayuanmbti/mbti">
+        <a className="wall-arrow" href="/mbti">
           <Button>{filter === "none" ? "→" : "←"}</Button>
         </a>
       </div>

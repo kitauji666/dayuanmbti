@@ -146,7 +146,7 @@ function MBTI() {
           不清楚你的MBTI？点此进行测试{`>>`}
         </a>
         <br />
-        <a href="/dayuanmbti">返回主页</a>
+        <a href="/">返回主页</a>
       </div>
     </div>
   );
