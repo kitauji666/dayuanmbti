@@ -9,15 +9,15 @@ import MatchPage from "./views/MatchPage";
 
 function App() {
   return (
-    <BrowserRouter basename='/dayuanmbti'>
+    <div>
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/bgm/:id" element={<BangumiSummary />} />
-      <Route path="/mbti" element={<MBTI />} />
-      <Route path="/mbti/:id" element={<MBTIGroup />} />
-      <Route path="/match/:id" element={<MatchPage />} />
-    </Routes>
-    </BrowserRouter>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/bgm/:id" element={<BangumiSummary />} />
+        <Route path="/mbti" element={<MBTI />} />
+        <Route path="/mbti/:id" element={<MBTIGroup />} />
+        <Route path="/match/:id" element={<MatchPage />} />
+      </Routes>
+    </div>
   );
 }
 
