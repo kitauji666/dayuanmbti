@@ -5,7 +5,7 @@ function MBTICircle(props) {
     <div class="circle">
       <a
         // href={`https://www.personality-database.com/type/${num}/${personality}-anime-characters`}
-        href={`/mbti/${personality}`}
+        href={`#/mbti/${personality}`}
         style={{backgroundColor: backgroundColor, color: textColor}}
       >
         <span>{personality}</span>
