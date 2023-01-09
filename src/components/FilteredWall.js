@@ -10,6 +10,34 @@ function FilteredWall(props) {
   const { filter, header } = props;
   const [objects, setObjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const toURL = (mbti) => {
+    const mbtiMap = {
+      istj: 1,
+      estj: 2,
+      isfj: 3,
+      esfj: 4,
+      esfp: 5,
+      isfp: 6,
+      estp: 7,
+      istp: 8,
+      infj: 9,
+      enfj: 10,
+      infp: 11,
+      enfp: 12,
+      intp: 13,
+      entp: 14,
+      intj: 15,
+      entj: 16,
+    };
+    // Convert string to lowercase
+    mbti = mbti.toLowerCase();
+
+    // Replace string with corresponding number from charMap
+    let num = mbtiMap[mbti];
+
+    // Return URL with number
+    return `https://www.personality-database.com/type/${num}/${mbti}-anime-characters`;
+  };
   useEffect(() => {
     async function fetchData() {
       for (const object of data) {
@@ -37,7 +65,11 @@ function FilteredWall(props) {
   }
   return (
     <div>
-      <h1 style={{ marginTop:"3%", color: filter == "none" ? "red" : "black" }}>{header}</h1>
+      <h1
+        style={{ marginTop: "3%", color: filter == "none" ? "red" : "black" }}
+      >
+        {header}
+      </h1>
       <div className="wall">
         {objects.map((object) => (
           <div className="card" key={object.id}>
@@ -52,7 +84,17 @@ function FilteredWall(props) {
           </div>
         ))}
       </div>
-      {filter != "none" && objects.length == 0 && <p style={{textAlign:"center", marginTop:"3%"}}>暂无此类型的人</p>}
+      {filter != "none" && objects.length == 0 && (
+        <p style={{ textAlign: "center", marginTop: "3%" }}>
+          暂无此类型的人<br/>
+          <a
+            href={toURL(filter)}
+            target="_blank"
+          >
+            不妨来看看拥有此个性的动漫角色
+          </a>
+        </p>
+      )}
       <div className="wall-arrow-section">
         <a className="wall-arrow" href="#/mbti">
           <Button>{filter === "none" ? "→" : "←"}</Button>
