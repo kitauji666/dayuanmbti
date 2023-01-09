@@ -4,6 +4,7 @@ import AnimeCard from "./AnimeCard";
 import "../CSS/PageViews.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { useWindowSize } from "react-use";
+import Button from "react-bootstrap/Button";
 
 function PageViews(props) {
   const { items } = props;
@@ -115,6 +116,11 @@ function PageViews(props) {
             />
           </Pagination>
         )}
+      </div>
+      <div className="wall-arrow-section">
+        <a className="wall-arrow" href="#/">
+          <Button>{"←"}</Button>
+        </a>
       </div>
     </div>
   );
