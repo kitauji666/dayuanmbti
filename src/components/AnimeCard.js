@@ -130,6 +130,8 @@ function AnimeCard(props) {
         >
           Bangumi详细页面
         </a>
+        <br/>
+        <a href={`https://mikanani.me/Home/Search?searchstr=${animeName}`}target="_blank">该动画的资源</a>
       </div>
     </div>
   );
