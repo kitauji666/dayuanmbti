@@ -27,6 +27,8 @@ function PageViews(props) {
         <a href={`https://bangumi.tv/user/${props.id}`} target="_blank">
           {props.name}的Bangumi主页
         </a>
+        <br/>
+        <a href={`https://bgm.xiadong.info/report/${props.id}?year=2022`} target="_blank">{props.name}的2022动画年鉴</a>
       </div>
       {displayedItems.map((item) => (
         <AnimeCard
