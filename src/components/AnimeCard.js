@@ -66,7 +66,7 @@ function AnimeCard(props) {
         if (!name) {
           name = response.data.name;
         }
-        console.log(response.data);
+        // console.log(response.data);
         const epNum = getInfo(response, "话数");
         const startDate = getInfo(response, "放送开始", "上映年度");
         const rank = response.data.rating.rank;
@@ -116,6 +116,8 @@ function AnimeCard(props) {
           <p>
             <span style={{ fontWeight: "bold" }}>{props.user}</span>的评价是：
             <span className="anime-card-comment">{props.comment}</span>
+            <br/>
+            <span>（更新于{props.commentTime}）</span>
           </p>
         )}
         {/* <p>

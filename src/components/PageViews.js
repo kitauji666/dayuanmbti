@@ -37,6 +37,7 @@ function PageViews(props) {
           comment={item.comment}
           subjectId={item.subject_id}
           userrate={item.rate}
+          commentTime={item.commentTime}
         />
       ))}
       <div style={{ display: "block" }}>

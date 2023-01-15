@@ -27,12 +27,30 @@ function Bangumi(props) {
               )
               .then((response) => {
                 for (const item of response.data.data) {
+                  console.log(item);
+                  const date = new Date(item.updated_at);
+                  const options = {
+                    timeZone: "Asia/Shanghai",
+                    year: "numeric",
+                    month: "numeric",
+                    day: "numeric",
+                    weekday: "long",
+                    hour: "numeric",
+                    minute: "numeric",
+                  };
+                  let timeString = new Intl.DateTimeFormat(
+                    "zh-CN",
+                    options
+                  ).format(date);
+                  
+
                   const rate = item.rate;
                   if (rate >= 8) {
                     data.push({
                       comment: item.comment,
                       subject_id: item.subject_id,
                       rate: item.rate,
+                      commentTime: timeString,
                     });
                   }
                 }
@@ -56,16 +74,14 @@ function Bangumi(props) {
 
   useEffect(() => {
     FetchBestCollection(props.id);
-    axios
-    .get(`https://api.bgm.tv/v0/users/${props.id}`)
-    .then((response) => {
+    axios.get(`https://api.bgm.tv/v0/users/${props.id}`).then((response) => {
       setUserName(response.data.nickname);
     });
   }, []);
   if (loading) {
-    return <Loader prompt="正在访问Bangumi，请稍候"/>;
+    return <Loader prompt="正在访问Bangumi，请稍候" />;
   }
-  return <PageViews items={fetchedData} name={username} id={props.id}/>;
+  return <PageViews items={fetchedData} name={username} id={props.id} />;
 }
 
 export default Bangumi;
